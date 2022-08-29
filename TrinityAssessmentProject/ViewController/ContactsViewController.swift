@@ -67,6 +67,11 @@ class ContactsViewController: UIViewController {
     
     @objc func refresh(_ sender: AnyObject) {
        // Code to refresh table view
+        
+        self.contactsViewModel.getContactsFromJSON(file: "ContactsData")
+        
+        self.contactsTV.reloadData()
+        
         refreshControl.endRefreshing()
     }
 }
