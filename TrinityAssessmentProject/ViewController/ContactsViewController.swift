@@ -50,11 +50,14 @@ class ContactsViewController: UIViewController {
     private func configNavBar() {
         self.navigationController?.isNavigationBarHidden = false
         
-        let navBarAddButton = UIBarButtonItem(image: UIImage(systemName: "add"), style: .plain, target: self, action: #selector(self.addContact))
-        let navBarSearchButton = UIBarButtonItem(image: UIImage(systemName: "search"), style: .plain, target: self, action: #selector(self.searchContact))
+        let navBarAddButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(self.addContact))
+        let navBarSearchButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(self.searchContact))
         
         self.navigationItem.rightBarButtonItem = navBarAddButton
         self.navigationItem.leftBarButtonItem = navBarSearchButton
+        
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 255/255, green: 140/255, blue: 0/255, alpha: 1)
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 255/255, green: 140/255, blue: 0/255, alpha: 1)
     }
     
     @objc func addContact() {
