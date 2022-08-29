@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dsh-DU-Gs9">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qMJ-0i-Ouq">
+            <objects>
+                <navigationController id="Dsh-DU-Gs9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hro-43-LVS">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WBK-7y-860"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55s-4V-6px" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-680" y="73"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Contacts" id="BYZ-38-t0r" customClass="ContactsViewController" customModule="TrinityAssessmentProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K8N-QX-t1U">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="1" green="0.5490196078431373" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="K8N-QX-t1U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2o4-yv-4wW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K8N-QX-t1U" secondAttribute="bottom" id="HdC-af-Vbm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K8N-QX-t1U" secondAttribute="trailing" id="I2g-fa-pc0"/>
+                            <constraint firstItem="K8N-QX-t1U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="euA-EZ-1Rn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="3mB-ba-ifs"/>
+                    <connections>
+                        <outlet property="contactsTV" destination="K8N-QX-t1U" id="Vp6-Wr-WoH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="50"/>
+        </scene>
+        <!--Contact Detail View Controller-->
+        <scene sceneID="weP-Bm-SeQ">
+            <objects>
+                <viewController storyboardIdentifier="ContactDetailViewController" id="DmS-zY-bTe" customClass="ContactDetailViewController" customModule="TrinityAssessmentProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKm-Yq-c4A">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-solidOrange" translatesAutoresizingMaskIntoConstraints="NO" id="Lds-V5-5oI">
+                                <rect key="frame" x="120" y="68" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="jE0-VN-dJn"/>
+                                    <constraint firstAttribute="height" constant="150" id="nmb-A7-bb7"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qaG-TW-5sG">
+                                <rect key="frame" x="0.0" y="250" width="390" height="560"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xOc-9k-VM1"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.5490196078431373" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lds-V5-5oI" firstAttribute="centerX" secondItem="xOc-9k-VM1" secondAttribute="centerX" id="MXl-F3-qxH"/>
+                            <constraint firstItem="xOc-9k-VM1" firstAttribute="trailing" secondItem="qaG-TW-5sG" secondAttribute="trailing" id="U3u-RP-xof"/>
+                            <constraint firstItem="xOc-9k-VM1" firstAttribute="bottom" secondItem="qaG-TW-5sG" secondAttribute="bottom" id="UUP-GO-RlH"/>
+                            <constraint firstItem="Lds-V5-5oI" firstAttribute="top" secondItem="xOc-9k-VM1" secondAttribute="top" constant="24" id="lwE-68-Kag"/>
+                            <constraint firstItem="qaG-TW-5sG" firstAttribute="leading" secondItem="xOc-9k-VM1" secondAttribute="leading" id="v8M-BD-hXo"/>
+                            <constraint firstItem="qaG-TW-5sG" firstAttribute="top" secondItem="Lds-V5-5oI" secondAttribute="bottom" constant="32" id="yHz-4R-rtT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="conatactAvatar" destination="Lds-V5-5oI" id="SBb-NL-bs9"/>
+                        <outlet property="contactDetailTv" destination="qaG-TW-5sG" id="iwh-hC-9sF"/>
+                        <outlet property="userAvatar" destination="Lds-V5-5oI" id="NcJ-dw-4r0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBe-fe-tNd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="50"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg-solidOrange" width="960" height="540"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

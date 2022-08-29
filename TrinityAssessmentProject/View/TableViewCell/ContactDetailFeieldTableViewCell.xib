@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactDetailFeieldTableViewCell" id="KGk-i7-Jjw" customClass="ContactDetailFeieldTableViewCell" customModule="TrinityAssessmentProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eB-FX-nlX">
+                        <rect key="frame" x="16" y="11.666666666666664" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8T9-QQ-Ofx">
+                        <rect key="frame" x="129" y="5" width="97" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6eB-FX-nlX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JiW-1V-aSW"/>
+                    <constraint firstItem="8T9-QQ-Ofx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="QWc-81-mxm"/>
+                    <constraint firstAttribute="trailing" secondItem="8T9-QQ-Ofx" secondAttribute="trailing" constant="20" id="RuM-D4-fOf"/>
+                    <constraint firstAttribute="bottom" secondItem="8T9-QQ-Ofx" secondAttribute="bottom" constant="4" id="Vo2-qF-Hby"/>
+                    <constraint firstItem="6eB-FX-nlX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jZ8-yh-JJR"/>
+                    <constraint firstItem="8T9-QQ-Ofx" firstAttribute="leading" secondItem="6eB-FX-nlX" secondAttribute="trailing" constant="20" id="scB-DI-pcz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="fieldName" destination="6eB-FX-nlX" id="wpX-Nl-Yek"/>
+                <outlet property="valueTextField" destination="8T9-QQ-Ofx" id="BM5-tq-Fsx"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="21"/>
+        </tableViewCell>
+    </objects>
+</document>
